@@ -1,0 +1,86 @@
+# CodeRabbit Configuration File
+# Documentation: https://docs.coderabbit.ai/guides/configure-coderabbit
+
+# Language settings
+language: en-US
+
+# Review settings
+reviews:
+  # Request changes workflow
+  request_changes_workflow: false
+
+  # High-level summary
+  high_level_summary: true
+
+  # Poem generation (optional fun feature)
+  poem: false
+
+  # Review status (can be "approve" or "comment")
+  review_status: comment
+
+  # Collapse walkthrough on PR page
+  collapse_walkthrough: false
+
+  # Auto-review settings
+  auto_review:
+    enabled: true
+    auto_incremental_review: true
+    ignore_title_keywords:
+      - "WIP"
+      - "DO NOT REVIEW"
+      - "DRAFT"
+
+  # Path filters for files to review
+  path_filters:
+    - "!**/*.md"
+    - "!**/package-lock.json"
+    - "!**/yarn.lock"
+    - "!**/*.min.js"
+    - "!**/*.min.css"
+
+  # Abort review on specific patterns
+  abort_on_close: true
+
+# Chat settings
+chat:
+  auto_reply: true
+
+# Knowledge base settings (for custom documentation)
+knowledge_base:
+  opt_out: false
+  learnings:
+    scope: "global"
+
+# Tools configuration
+tools:
+  # GitHub Actions integration
+  github-actions:
+    enabled: true
+
+  # Linter integration
+  eslint:
+    enabled: true
+
+  # Testing tools
+  jest:
+    enabled: true
+
+# Early access features
+early_access: false
+
+# Enable/disable specific review types
+review_types:
+  security: true
+  performance: true
+  best_practices: true
+  documentation: true
+  testing: true
+  accessibility: true
+
+# Custom review instructions
+instructions: |
+  - Focus on code quality, security, and best practices
+  - Highlight potential bugs and edge cases
+  - Suggest performance improvements where applicable
+  - Check for proper error handling
+  - Verify test coverage for new features
