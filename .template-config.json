@@ -1,0 +1,36 @@
+{
+  "templateName": "Cursor Full Stack Template",
+  "version": "1.0.0",
+  "description": "Complete template with CodeRabbit, CodeSprings MCP, and Claude Code integration",
+  "features": [
+    "CodeRabbit automatic code reviews",
+    "CodeSprings MCP integration",
+    "Claude Code CLI support",
+    "Git and GitHub CLI configured",
+    "Pre-configured .coderabbit.yaml",
+    "Auto-setup script included"
+  ],
+  "requiredTools": {
+    "git": "Required for version control",
+    "gh": "GitHub CLI for repository management",
+    "node": "Optional - for JavaScript/TypeScript projects",
+    "cursor": "IDE with MCP support"
+  },
+  "setup": {
+    "mcp": {
+      "globalConfig": "C:\\Users\\Aniko\\.cursor\\mcp.json",
+      "server": "https://mcp.codespring.app/mcp",
+      "status": "Pre-configured globally"
+    },
+    "coderabbit": {
+      "configFile": ".coderabbit.yaml",
+      "installUrl": "https://github.com/apps/coderabbitai",
+      "status": "Requires installation per repository"
+    },
+    "git": {
+      "user": "ocean",
+      "email": "ocean824@gmail.com",
+      "status": "Configured globally"
+    }
+  }
+}
