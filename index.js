@@ -6,7 +6,16 @@ function main() {
 
 // Test function to demonstrate CodeRabbit review
 function calculateSum(a, b) {
-    return a + b;
+    // Coerce inputs to numbers
+    const numA = Number(a);
+    const numB = Number(b);
+    
+    // Validate that both inputs are finite numbers
+    if (!Number.isFinite(numA) || !Number.isFinite(numB)) {
+        throw new Error(`Invalid input: both arguments must be valid numbers. Received: a=${a} (${typeof a}), b=${b} (${typeof b})`);
+    }
+    
+    return numA + numB;
 }
 
 // Test function with potential issues for CodeRabbit to catch
